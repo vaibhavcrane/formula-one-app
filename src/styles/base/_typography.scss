@@ -1,0 +1,72 @@
+/*=============================================
+=            Font Imports            =
+=============================================*/
+
+/*----------  Titilium  ----------*/
+
+@import url(https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap);
+
+$titilium: "Titillium Web", sans-serif;
+
+/*----------  F1  ----------*/
+
+@font-face {
+	font-family: "Formula1-Regular";
+	src: url("../../assets/fonts/F1/Formula1-Regular.ttf") format("truetype");
+}
+
+$F1: "Formula1-Regular", sans-serif;
+
+@font-face {
+	font-family: "Formula1-Black";
+	src: url("../../assets/fonts/F1/Formula1-Black.ttf") format("truetype");
+}
+
+$F1-Black: "Formula1-Black", sans-serif;
+
+@font-face {
+	font-family: "Formula1-Bold";
+	src: url("../../assets/fonts/F1/Formula1-Bold.ttf") format("truetype");
+}
+
+$F1-Bold: "Formula1-Bold", sans-serif;
+
+@font-face {
+	font-family: "Formula1-Wide";
+	src: url("../../assets/fonts/F1/Formula1-Wide.ttf") format("truetype");
+}
+
+$F1-Wide: "Formula1-Wide", sans-serif;
+
+/*=====  End of Font Imports  ======*/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: 500;
+	line-height: 1.4;
+	font-family: $titilium;
+	color: #000;
+}
+
+h1 {
+	font-size: 2.8125rem;
+}
+h2 {
+	font-size: 2.25rem;
+}
+h3 {
+	font-size: 1.875rem;
+}
+h4 {
+	font-size: 1.5rem;
+}
+h5 {
+	font-size: 1.25rem;
+}
+h6 {
+	font-size: 1rem;
+}

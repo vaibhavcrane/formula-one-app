@@ -1,0 +1,50 @@
+// TODO: Update styles to match the new design
+
+@use "../base/typography" as *;
+@use "../abstracts/variables" as *;
+
+body {
+	font-family: $titilium;
+}
+/*=============================================
+=            Theming            =
+=============================================*/
+
+$text-primary: var(--text-primary);
+$text-secondary: var(--text-secondary);
+$card-bg: var(--card-bg);
+$bg-color: var(--bg-color);
+$accent: var(--accent);
+
+.light {
+	--text-primary: #{$text-primary-light};
+	--text-secondary: #{$text-secondary-light};
+	--card-bg: #{$card-background-light};
+	--bg-color: #{$background-light};
+	--accent: #{$accent-light};
+	color: #{$text-primary-light};
+}
+
+.dark {
+	--text-primary: #{$text-primary-dark};
+	--text-secondary: #{$text-secondary-dark};
+	--card-bg: #{$card-background-dark};
+	--bg-color: #{$background-dark};
+	--accent: #{$accent-dark};
+	color: #{$text-primary-dark};
+}
+/*=====  End of Theming  ======*/
+
+.container {
+	position: relative;
+	margin: 0 auto;
+	padding: 5rem 0;
+	clear: both;
+	width: calc(100% - 1rem);
+}
+
+.App {
+	min-height: 100vh;
+	background-color: $bg-color;
+	text-transform: lowercase;
+}
