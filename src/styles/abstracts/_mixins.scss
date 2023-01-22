@@ -1,0 +1,15 @@
+@use "./variables" as *;
+
+@mixin grid-span-large($span) {
+	@media screen and (min-width: $large) {
+		grid-column-end: span #{$span};
+		@content;
+	}
+}
+
+@mixin grid-span-medium($span) {
+	@media screen and (min-width: $medium) and (max-width: $large) {
+		grid-column-end: span #{$span};
+		@content;
+	}
+}
