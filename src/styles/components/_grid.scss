@@ -1,0 +1,56 @@
+@use "../abstracts" as *;
+
+.grid {
+	display: grid;
+	gap: 1rem;
+
+	@media screen and (min-width: $medium) {
+		grid-template-columns: repeat(12, 1fr);
+	}
+
+	@media screen and (min-width: $medium) {
+		max-width: 1200px;
+		padding: 3rem 0;
+		width: 90%;
+	}
+
+	@media screen and (min-width: $small) and (max-width: $medium) {
+		width: clamp(calc(100% - 4rem), 3rem, calc(100% - 1rem));
+	}
+}
+
+.grid-span-large-8 {
+	@media screen and (min-width: $large) {
+		grid-column-end: span 8;
+	}
+}
+
+.grid-span-medium-8 {
+	@media screen and (min-width: $medium) and (max-width: $large) {
+		grid-column-end: span 8;
+	}
+}
+
+.grid-span-large-6 {
+	@media screen and (min-width: $large) {
+		grid-column-end: span 6;
+	}
+}
+
+.grid-span-medium-6 {
+	@media screen and (min-width: $medium) and (max-width: $large) {
+		grid-column-end: span 6;
+	}
+}
+
+.grid-span-large-4 {
+	@media screen and (min-width: $large) {
+		grid-column-end: span 4;
+	}
+}
+
+.grid-span-medium-4 {
+	@media screen and (min-width: $medium) and (max-width: $large) {
+		grid-column-end: span 4;
+	}
+}

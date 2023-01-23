@@ -1,0 +1,190 @@
+@use "../abstracts" as *;
+@use "../base" as *;
+
+.card {
+	border-radius: 15px;
+	background-color: $card-bg;
+	overflow: hidden;
+	container-type: inline-size;
+	text-decoration: none;
+
+	&__header {
+		font-family: $F1;
+		font-size: clamp(0.7rem, 3cqi, 1rem);
+		color: $text-primary;
+
+		@media screen and (min-width: $large) {
+			font-size: 1rem;
+		}
+	}
+
+	&__content {
+		display: flex;
+		flex-direction: column;
+		padding: 1rem 0 0 1rem;
+		align-content: space-between;
+		align-self: start;
+	}
+
+	&__name {
+		font-family: $F1-Bold;
+		text-transform: uppercase;
+		color: $text-primary;
+
+		&--race {
+			padding-top: 0.25rem;
+			font-size: clamp(1rem, 4.5cqi, 2rem);
+		}
+	}
+
+	&__subtext {
+		font-family: $F1;
+		color: $text-secondary;
+		opacity: 80%;
+
+		&--points {
+			font-size: clamp(0.5rem, 3.5cqi, 0.8rem);
+
+			@media screen and (min-width: $small) {
+				font-size: 0.8rem;
+			}
+		}
+
+		&--circuit {
+			font-size: 0.8rem;
+			line-height: 1.4rem;
+		}
+	}
+
+	&__team {
+		display: flex;
+		flex-direction: column;
+		font-family: $F1-Bold;
+		font-size: clamp(0.5rem, 3.5cqi, 0.8rem);
+		color: $text-secondary;
+		opacity: 80%;
+		line-height: 1.2rem;
+
+		span:nth-child(2) {
+			margin-bottom: 0.5rem;
+		}
+
+		@media screen and (min-width: $small) {
+			font-size: 0.8rem;
+		}
+
+		@media screen and (min-width: $large) {
+			flex-direction: row;
+			gap: 2rem;
+		}
+	}
+
+	&__header {
+		font-size: clamp(0.7rem, 3.5cqi, 1rem);
+	}
+
+	&__image {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+
+	&__weekend {
+		background-color: $accent;
+		width: fit-content;
+		padding: 0.25rem 0.5rem;
+		line-height: 1rem;
+		border-radius: 3px;
+		color: $text-primary;
+		font-family: $F1;
+		font-size: 0.67rem;
+	}
+
+	&__schedule {
+		width: 100%;
+		font-family: $F1-Bold;
+		font-size: 1rem;
+		color: $text-primary;
+		padding: 1rem 0;
+	}
+
+	&__results {
+		width: 100%;
+		font-family: $F1-Bold;
+		font-size: 1rem;
+		color: $text-primary;
+		padding: 1rem 0;
+
+		&--points {
+			font-family: $F1;
+			font-size: 0.8rem;
+			vertical-align: middle;
+		}
+	}
+}
+
+.card {
+	&--champion {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	&__name {
+		&--champion {
+			font-size: clamp(1rem, 4.5cqi, 3rem);
+			margin-top: 2rem;
+		}
+	}
+
+	&__image {
+		&--champion {
+			position: relative;
+			width: 175px;
+			height: 175px;
+			right: 0;
+			bottom: 0;
+
+			@media screen and (min-width: $large) {
+				width: 200px;
+				height: 200px;
+			}
+		}
+	}
+}
+
+.card {
+	&--race {
+		display: grid;
+		grid-template-columns: 1fr;
+		gap: 1rem;
+	}
+
+	&__image {
+		&--race {
+			padding: 1rem 0;
+			object-fit: contain;
+		}
+	}
+}
+
+.card {
+	&--standings {
+		@include grid-span-large(8);
+		@include grid-span-medium(8);
+		padding-right: 1rem;
+	}
+}
+
+.background-flag {
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	// background-image: url("../../assets/temp/netherlands.png");
+	background-size: 100% 70%;
+	background-position: bottom right;
+	background-repeat: no-repeat;
+	opacity: 0.04;
+	z-index: 0;
+}
