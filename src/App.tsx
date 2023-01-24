@@ -6,7 +6,7 @@ import { Navbar } from "./components";
 function App() {
 	//TODO: Add theme toggle
 	return (
-		<div className='App dark'>
+		<div className='App'>
 			<Navbar />
 			<AppProvider />
 		</div>

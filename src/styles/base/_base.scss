@@ -33,6 +33,24 @@ body {
 	}
 }
 
+:root[color-scheme="light"] {
+	--text-primary: var(--text-primary-light);
+	--text-secondary: var(--text-secondary-light);
+	--card-bg: var(--card-background-light);
+	--bg-color: var(--background-light);
+	--accent: var(--accent-light);
+	color: var(--text-primary);
+}
+
+:root[color-scheme="dark"] {
+	--text-primary: var(--text-primary-dark);
+	--text-secondary: var(--text-secondary-dark);
+	--card-bg: var(--card-background-dark);
+	--bg-color: var(--background-dark);
+	--accent: var(--accent-dark);
+	color: var(--text-primary);
+}
+
 /*=====  End of Theming  ======*/
 
 .container {

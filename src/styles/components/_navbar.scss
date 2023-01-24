@@ -63,4 +63,17 @@ $light-icon: url("../../assets/svg/theme/light.svg");
 			}
 		}
 	}
+	.theme-switcher {
+		border: none;
+		background: transparent;
+		cursor: pointer;
+		display: flex;
+		align-items: center;
+
+		svg {
+			width: 1.5rem;
+			height: 1.5rem;
+			color: var(--text-secondary);
+		}
+	}
 }

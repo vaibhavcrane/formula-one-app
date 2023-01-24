@@ -1,3 +1,5 @@
+import { ThemeSwitcher } from "./ThemeSwitcher";
+
 export const Navbar = () => {
 	return (
 		<nav className='navbar'>
@@ -17,6 +19,7 @@ export const Navbar = () => {
 							<a href='/about'>About</a>
 						</li>
 					</ul>
+					<ThemeSwitcher />
 				</div>
 			</div>
 		</nav>
