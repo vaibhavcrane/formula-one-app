@@ -1,0 +1,25 @@
+@use "../abstracts" as *;
+
+.constructor-standings .constructors {
+	.card {
+		&__name--champion {
+			margin-top: 0.5rem;
+		}
+		&__image {
+			object-fit: contain;
+			padding-right: 1rem;
+
+			&--champion {
+				position: relative;
+				width: 100px;
+				height: 100px;
+				right: 0;
+
+				@media screen and (min-width: $large) {
+					width: 125px;
+					height: 125px;
+				}
+			}
+		}
+	}
+}

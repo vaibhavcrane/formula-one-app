@@ -1,0 +1,63 @@
+@use "../abstracts" as *;
+
+/**
+	 *
+	 * styling for championship card on driver's standing page
+	 *
+	 */
+
+.driver-standings-cards {
+	display: none;
+
+	@media screen and (min-width: $medium) {
+		display: grid;
+		gap: 1rem;
+
+		.card {
+			&__name {
+				&--champion {
+					font-size: clamp(1rem, 5cqi, 4rem);
+				}
+			}
+		}
+		img {
+			display: none;
+			@media screen and (min-width: $large) {
+				display: block;
+			}
+		}
+	}
+}
+
+.driver-standings-table {
+	&__head {
+		text-align: left;
+
+		th {
+			font-weight: normal;
+		}
+	}
+
+	&__driver {
+		font-weight: bold;
+
+		&--last-name {
+			display: none;
+		}
+
+		@media screen and (min-width: $large) {
+			&--first-name,
+			&--last-name {
+				display: inline;
+			}
+		}
+	}
+
+	// &__points {
+	// 	@media screen and (min-width: $medium) {
+	// 		&::after {
+	// 			content: " pts";
+	// 		}
+	// 	}
+	// }
+}

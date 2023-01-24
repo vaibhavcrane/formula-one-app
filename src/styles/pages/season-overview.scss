@@ -1,0 +1,37 @@
+@use "../abstracts" as *;
+
+.season-overview .constructors {
+	.card__image {
+		object-fit: contain;
+		padding-right: 1rem;
+
+		&--champion {
+			position: relative;
+			width: 125px;
+			height: 125px;
+			right: 0;
+
+			@media screen and (min-width: $large) {
+				width: 175px;
+				height: 175px;
+			}
+		}
+	}
+}
+
+.standings-column {
+	display: grid;
+	gap: 1rem;
+
+	@include grid-span-large(4) {
+		display: grid;
+		grid-template-rows: repeat(2, 1fr);
+		gap: 1rem;
+	}
+
+	@include grid-span-medium(12) {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 1rem;
+	}
+}
