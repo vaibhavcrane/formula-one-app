@@ -3,7 +3,7 @@
 
 .card {
 	border-radius: 15px;
-	background-color: $card-bg;
+	background-color: var(--card-bg);
 	overflow: hidden;
 	container-type: inline-size;
 	text-decoration: none;
@@ -11,7 +11,7 @@
 	&__header {
 		font-family: $F1;
 		font-size: clamp(0.7rem, 3cqi, 1rem);
-		color: $text-primary;
+		color: var(--text-primary);
 
 		@media screen and (min-width: $large) {
 			font-size: 1rem;
@@ -29,7 +29,7 @@
 	&__name {
 		font-family: $F1-Bold;
 		text-transform: uppercase;
-		color: $text-primary;
+		color: var(--text-primary);
 
 		&--race {
 			padding-top: 0.25rem;
@@ -39,7 +39,7 @@
 
 	&__subtext {
 		font-family: $F1;
-		color: $text-secondary;
+		color: var(--text-secondary);
 		opacity: 80%;
 
 		&--points {
@@ -61,7 +61,7 @@
 		flex-direction: column;
 		font-family: $F1-Bold;
 		font-size: clamp(0.5rem, 3.5cqi, 0.8rem);
-		color: $text-secondary;
+		color: var(--text-secondary);
 		opacity: 80%;
 		line-height: 1.2rem;
 
@@ -90,12 +90,12 @@
 	}
 
 	&__weekend {
-		background-color: $accent;
+		background-color: var(--accent);
 		width: fit-content;
 		padding: 0.25rem 0.5rem;
 		line-height: 1rem;
 		border-radius: 3px;
-		color: $text-primary;
+		color: var(--text-primary);
 		font-family: $F1;
 		font-size: 0.67rem;
 	}
@@ -104,7 +104,7 @@
 		width: 100%;
 		font-family: $F1-Bold;
 		font-size: 1rem;
-		color: $text-primary;
+		color: var(--text-primary);
 		padding: 1rem 0;
 	}
 
@@ -112,7 +112,7 @@
 		width: 100%;
 		font-family: $F1-Bold;
 		font-size: 1rem;
-		color: $text-primary;
+		color: var(--text-primary);
 		padding: 1rem 0;
 
 		&--points {

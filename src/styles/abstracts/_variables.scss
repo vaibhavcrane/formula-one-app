@@ -2,11 +2,13 @@
 =            light color variables            =
 =============================================*/
 
-$background-light: #fff;
-$card-background-light: #bdbdbd80;
-$text-primary-light: #000000;
-$text-secondary-light: #2d2d2d;
-$accent-light: #bdbdbd;
+:root {
+	--background-light: #fff;
+	--card-background-light: #bdbdbd80;
+	--text-primary-light: #000000;
+	--text-secondary-light: #2d2d2d;
+	--accent-light: #bdbdbd;
+}
 
 /*=====  End of light color variables  ======*/
 
@@ -14,11 +16,13 @@ $accent-light: #bdbdbd;
 =            dark color variables            =
 =============================================*/
 
-$background-dark: #111111;
-$card-background-dark: #2d2d2d;
-$text-primary-dark: #fff;
-$text-secondary-dark: #efefef;
-$accent-dark: #4a4a4a;
+:root {
+	--background-dark: #111111;
+	--card-background-dark: #2d2d2d;
+	--text-primary-dark: #fff;
+	--text-secondary-dark: #efefef;
+	--accent-dark: #4a4a4a;
+}
 
 /*=====  End of dark color variables  ======*/
 

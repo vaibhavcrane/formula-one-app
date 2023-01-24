@@ -1,3 +1,6 @@
+// ! Not able to use Sass variables in :root
+// ? Why?
+
 @use "../base/typography" as *;
 @use "../abstracts/variables" as *;
 
@@ -8,29 +11,28 @@ body {
 =            Theming            =
 =============================================*/
 
-$text-primary: var(--text-primary);
-$text-secondary: var(--text-secondary);
-$card-bg: var(--card-bg);
-$bg-color: var(--bg-color);
-$accent: var(--accent);
-
-.light {
-	--text-primary: #{$text-primary-light};
-	--text-secondary: #{$text-secondary-light};
-	--card-bg: #{$card-background-light};
-	--bg-color: #{$background-light};
-	--accent: #{$accent-light};
-	color: #{$text-primary-light};
+@media (prefers-color-scheme: light) {
+	:root {
+		--text-primary: var(--text-primary-light);
+		--text-secondary: var(--text-secondary-light);
+		--card-bg: var(--card-background-light);
+		--bg-color: var(--background-light);
+		--accent: var(--accent-light);
+		color: var(--text-primary);
+	}
 }
 
-.dark {
-	--text-primary: #{$text-primary-dark};
-	--text-secondary: #{$text-secondary-dark};
-	--card-bg: #{$card-background-dark};
-	--bg-color: #{$background-dark};
-	--accent: #{$accent-dark};
-	color: #{$text-primary-dark};
+@media (prefers-color-scheme: dark) {
+	:root {
+		--text-primary: var(--text-primary-dark);
+		--text-secondary: var(--text-secondary-dark);
+		--card-bg: var(--card-background-dark);
+		--bg-color: var(--background-dark);
+		--accent: var(--accent-dark);
+		color: var(--text-primary);
+	}
 }
+
 /*=====  End of Theming  ======*/
 
 .container {
@@ -41,8 +43,8 @@ $accent: var(--accent);
 	width: calc(100% - 1rem);
 }
 
-.App {
+body {
 	min-height: 100vh;
-	background-color: $bg-color;
+	background-color: var(--bg-color);
 	text-transform: lowercase;
 }

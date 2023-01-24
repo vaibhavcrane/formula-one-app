@@ -3,8 +3,8 @@
 $light-icon: url("../../assets/svg/theme/light.svg");
 
 .navbar {
-	background-color: $bg-color;
-	color: $text-primary;
+	background-color: var(--bg-color);
+	color: var(--text-primary);
 	// position: fixed;
 	top: 0;
 	width: 100%;
@@ -32,7 +32,7 @@ $light-icon: url("../../assets/svg/theme/light.svg");
 		font-family: $F1-Black;
 
 		a {
-			color: $text-secondary;
+			color: var(--text-secondary);
 			text-decoration: none;
 		}
 	}
@@ -57,7 +57,7 @@ $light-icon: url("../../assets/svg/theme/light.svg");
 				padding: 0 2rem;
 
 				a {
-					color: $text-secondary;
+					color: var(--text-secondary);
 					text-decoration: none;
 				}
 			}
