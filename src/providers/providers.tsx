@@ -1,4 +1,3 @@
-import "../styles/main.scss";
 import { QueryClientProvider } from "@tanstack/react-query";
 import queryClient from "../lib/query";
 import { SeasonContextProvider } from "../contexts/SeasonContext";

@@ -1,5 +1,3 @@
-import "../../styles/main.scss";
-
 export const Navbar = () => {
 	return (
 		<nav className='navbar'>
