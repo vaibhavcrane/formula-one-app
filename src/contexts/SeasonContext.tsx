@@ -6,9 +6,7 @@ type SeasonContextProviderProps = {
 
 export const SeasonContext = createContext({} as any);
 
-export const SeasonContextProvider = ({
-	children,
-}: SeasonContextProviderProps) => {
+export const SeasonContextProvider = ({ children }: SeasonContextProviderProps) => {
 	const thisYear = new Date().getFullYear();
 	const [year, setYear] = useState(thisYear);
 	return (
@@ -21,5 +19,3 @@ export const SeasonContextProvider = ({
 		</SeasonContext.Provider>
 	);
 };
-
-export default SeasonContext;
