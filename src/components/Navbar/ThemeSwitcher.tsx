@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { SunIcon, MoonIcon } from "@heroicons/react/24/outline";
+import { SunIcon, MoonIcon } from "@heroicons/react/24/solid";
 
 //hooks import
 import useLocalStorage from "../../hooks/useLocalStorage";
