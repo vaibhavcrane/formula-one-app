@@ -1,7 +1,8 @@
 import ergast from "../../lib/axios";
-import { useQuery } from "@tanstack/react-query";
+import { useQuery, UseQueryResult } from "@tanstack/react-query";
 import { useContext } from "react";
 import { SeasonContext } from "../../contexts/SeasonContext";
+import { IDriver, IDriverStandings } from "../../lib/interfaces/ergast";
 
 // * ----------START Get drivers in particular season---------- * //
 /**
@@ -10,7 +11,7 @@ import { SeasonContext } from "../../contexts/SeasonContext";
  * @returns An object with the following properties:
  */
 const getDriversInSeason = async (year: number | "current") => {
-	return await ergast.get(`/${year}/drivers.json`);
+	return (await ergast.get(`/${year}/drivers.json`).then((res) => res.data.MRData.DriverTable.Drivers)) as IDriver[];
 };
 
 export const useDriversInSeason = () => {
@@ -29,7 +30,9 @@ export const useDriversInSeason = () => {
  * @returns The useQuery hook returns an object with the following properties:
  */
 const getDriversChampionshipStandings = async (year: number | "current") => {
-	return await ergast.get(`${year}/driverStandings.json`);
+	return (await ergast
+		.get(`${year}/driverStandings.json`)
+		.then((res) => res.data.MRData.StandingsTable.StandingsLists[0].DriverStandings)) as IDriverStandings[];
 };
 
 export const useDriversChampionshipStandings = () => {
@@ -48,7 +51,9 @@ export const useDriversChampionshipStandings = () => {
  * @returns The useQuery hook returns an object with the following properties:
  */
 const getDriverDetails = async (driverId: string | undefined) => {
-	return await ergast.get(`/drivers/${driverId}.json`);
+	return (await ergast
+		.get(`/drivers/${driverId}.json`)
+		.then((res) => res.data.MRData.DriverTable.Drivers[0])) as IDriver;
 };
 
 export const useDriverDetails = (driverId: string | undefined) => {
