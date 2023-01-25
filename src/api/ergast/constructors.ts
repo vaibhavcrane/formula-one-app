@@ -79,16 +79,17 @@ export const useConstructorChampion = () => {
 	});
 };
 
-const getConstructorDriverForSeason = async (year: number | "current", constructorId: string) => {
+const getConstructorDriverForSeason = async (year: number | "current", constructorId: string | undefined) => {
 	return (await ergast
 		.get(`/${year}/constructors/${constructorId}/drivers.json`)
 		.then((res) => res.data.MRData.DriverTable.Drivers)) as IDriver[];
 };
 
-export const useConstructorDriverForSeason = (constructorId: string) => {
+export const useConstructorDriverForSeason = (constructorId: string | undefined) => {
 	const { year } = useContext(SeasonContext);
 	return useQuery({
 		queryKey: ["constructorDriverForSeason", year, constructorId],
 		queryFn: () => getConstructorDriverForSeason(year, constructorId),
+		enabled: !!constructorId,
 	});
 };

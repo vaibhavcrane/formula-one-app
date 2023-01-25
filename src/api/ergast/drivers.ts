@@ -65,7 +65,9 @@ export const useDriverDetails = (driverId: string | undefined) => {
 // * ------------END Get driver details---------- * //
 
 const getDriverChampion = async (year: number | "current") => {
-	return await ergast.get(`/${year}/driverStandings/1.json`);
+	return (await ergast
+		.get(`/${year}/driverStandings/1.json`)
+		.then((res) => res.data.MRData.StandingsTable.StandingsLists[0].DriverStandings[0])) as IDriverStandings;
 };
 
 export const useDriverChampion = () => {
