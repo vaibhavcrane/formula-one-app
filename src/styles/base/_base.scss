@@ -66,3 +66,21 @@ body {
 	background-color: var(--bg-color);
 	text-transform: lowercase;
 }
+
+.error-404 {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 1rem;
+
+	& > * {
+		padding: 1rem;
+	}
+
+	p {
+		color: var(--text-primary);
+		font-family: $F1-Black;
+		font-size: 2rem;
+	}
+}
