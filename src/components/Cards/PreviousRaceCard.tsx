@@ -5,6 +5,9 @@ import { usePreviousRace, usePreviousRaceResults } from "../../api/ergast";
 import { Loading } from "../Loading";
 import { Card } from "./Card";
 
+//temp import
+import abudhabi from "../../assets/temp/abudhabi.png";
+
 export const PreviousRaceCard = () => {
 	const { data: previousRace, isLoading, isError } = usePreviousRace();
 
@@ -33,7 +36,7 @@ export const PreviousRaceCard = () => {
 				<div className='card__content'>
 					<p className='card__header'>previous race</p>
 					<img
-						src='src/assets/temp/abudhabi.png'
+						src={abudhabi}
 						alt={previousRace.Circuit.circuitName}
 						className='card__image card__image--race'
 					/>

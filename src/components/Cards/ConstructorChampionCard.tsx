@@ -9,6 +9,9 @@ import { IDriver } from "../../lib/interfaces/ergast";
 //componnent imports
 import { Card, Loading } from "../../components";
 
+//temp imports
+import redbull from "../../assets/temp/redbull.png";
+
 export const ConstructorChampionCard = () => {
 	const { data: constructorChampion, isLoading, isError } = useConstructorChampion();
 
@@ -53,7 +56,7 @@ export const ConstructorChampionCard = () => {
 				</div>
 				<img
 					className='card__image--champion card__image'
-					src='src/assets/temp/redbull.png'
+					src={redbull}
 					alt={constructorChampion.Constructor.name}
 				/>
 			</div>

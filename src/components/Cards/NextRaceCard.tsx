@@ -7,6 +7,9 @@ import { useNextRace } from "../../api/ergast";
 //componnent imports
 import { Card, Loading } from "../../components";
 
+// temp imports
+import bahrain from "../../assets/temp/bahrain.png";
+
 export const NextRaceCard = () => {
 	const { data: nextRace, isLoading, isError } = useNextRace();
 
@@ -32,7 +35,7 @@ export const NextRaceCard = () => {
 				<div className='card__content'>
 					<p className='card__header'>next race</p>
 					<img
-						src='src/assets/temp/bahrain.png'
+						src={bahrain}
 						alt={nextRace.Circuit.circuitName}
 						className='card__image card__image--race'
 					/>
