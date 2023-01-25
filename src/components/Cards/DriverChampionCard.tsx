@@ -4,6 +4,9 @@ import { useDriverChampion } from "../../api/ergast";
 //componnent imports
 import { Card, Loading } from "../../components";
 
+// ! temp imports
+import max from "../../assets/temp/max.png";
+
 export const DriverChampionCard = () => {
 	const { data: driverChampion, isLoading, isError } = useDriverChampion();
 
@@ -31,7 +34,7 @@ export const DriverChampionCard = () => {
 				</div>
 				<img
 					className='card__image--champion card__image'
-					src='src/assets/temp/max.png'
+					src={max}
 					alt={driverChampion.Driver.familyName}
 				/>
 			</div>
